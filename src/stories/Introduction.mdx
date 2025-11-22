@@ -1,0 +1,96 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Introduction" />
+
+# Radix UI Design System
+
+A reusable, themeable component library built on **Radix UI** primitives with **React**, **Tailwind CSS**, and **Storybook**.
+
+## Features
+
+- 🎨 **Multiple Themes**: Default (light), Dark, and Ocean (branded) themes
+- ♿ **Accessibility First**: Built on Radix UI for WAI-ARIA compliance
+- 🎯 **Design Tokens**: Centralized color, spacing, typography, and more
+- 🔧 **Composable**: Use Radix Slot pattern for flexible composition
+- 📦 **Production Ready**: Optimized for npm distribution
+- 🎭 **Storybook Docs**: Interactive documentation with live examples
+
+## Components
+
+### Button
+Multiple variants (primary, secondary, outline, ghost, destructive) with size options.
+Supports keyboard navigation and focus states.
+
+### Input
+Text input with validation states (default, error, success).
+Full keyboard and screen reader support.
+
+### Dialog (Modal)
+Accessible modal dialogs with overlay and animations.
+Wraps `@radix-ui/react-dialog` for complete accessibility.
+
+### Select (Dropdown)
+Dropdown menu with keyboard navigation and custom styling.
+Wraps `@radix-ui/react-select` with full ARIA support.
+
+### Switch (Toggle)
+Toggle component with smooth transitions.
+Wraps `@radix-ui/react-switch` for accessibility.
+
+### Tooltip
+Positioned tooltips with animations.
+Wraps `@radix-ui/react-tooltip` with proper ARIA labels.
+
+## Theming
+
+Use the **Theme** toolbar control (top of the page) to switch between themes in real-time:
+
+- **Default**: Clean light theme with blue primary color
+- **Dark**: Dark mode with adjusted colors for readability
+- **Ocean**: Branded theme with teal/ocean color palette
+
+All themes use CSS variables for easy customization.
+
+## Installation
+
+```bash
+npm install @your-org/design-system
+```
+
+## Usage
+
+```jsx
+import { Button, ThemeProvider, themes } from '@your-org/design-system';
+import '@your-org/design-system/styles.css';
+
+function App() {
+  return (
+    <ThemeProvider themes={themes} defaultTheme="default">
+      <Button variant="primary">Click me</Button>
+    </ThemeProvider>
+  );
+}
+```
+
+## Accessibility
+
+All components are built on Radix UI primitives, ensuring:
+- WAI-ARIA compliant markup
+- Keyboard navigation support
+- Screen reader compatibility
+- Focus management
+- Proper semantic HTML
+
+## Tech Stack
+
+- **React 19** - UI library
+- **Radix UI** - Accessible component primitives
+- **Tailwind CSS** - Utility-first styling
+- **Vite** - Build tool
+- **Storybook 8** - Component documentation
+
+## Resources
+
+- [Radix UI Documentation](https://www.radix-ui.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [GitHub Repository](#)
