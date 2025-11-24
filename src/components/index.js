@@ -42,3 +42,29 @@ export {
   TooltipContent,
   TooltipArrow,
 } from './Tooltip';
+
+export {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from './Card';
+
+export {
+  Heading,
+  Text,
+  Label,
+  Code,
+} from './Typography';
+
+export {
+  Icon,
+  CheckIcon,
+  CloseIcon,
+  AlertIcon,
+  InfoIcon,
+  HeartIcon,
+  SettingsIcon,
+} from './Icon';
