@@ -4,7 +4,6 @@ import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
-  TooltipArrow,
 } from '../components/tooltip';
 
 export default {
@@ -37,16 +36,15 @@ export const Basic = {
   ),
 };
 
-// With arrow
-export const WithArrow = {
+// With custom content
+export const CustomContent = {
   render: () => (
     <Tooltip>
       <TooltipTrigger asChild>
         <Button>Hover for tooltip</Button>
       </TooltipTrigger>
       <TooltipContent>
-        <TooltipArrow />
-        <p>Tooltip with arrow</p>
+        <p>Tooltip with custom styling</p>
       </TooltipContent>
     </Tooltip>
   ),
@@ -61,7 +59,6 @@ export const DifferentSides = {
           <Button>Top (default)</Button>
         </TooltipTrigger>
         <TooltipContent side="top">
-          <TooltipArrow />
           <p>Tooltip on top</p>
         </TooltipContent>
       </Tooltip>
@@ -72,7 +69,6 @@ export const DifferentSides = {
             <Button>Left</Button>
           </TooltipTrigger>
           <TooltipContent side="left">
-            <TooltipArrow />
             <p>Tooltip on left</p>
           </TooltipContent>
         </Tooltip>
@@ -82,7 +78,6 @@ export const DifferentSides = {
             <Button>Right</Button>
           </TooltipTrigger>
           <TooltipContent side="right">
-            <TooltipArrow />
             <p>Tooltip on right</p>
           </TooltipContent>
         </Tooltip>
@@ -93,7 +88,6 @@ export const DifferentSides = {
           <Button>Bottom</Button>
         </TooltipTrigger>
         <TooltipContent side="bottom">
-          <TooltipArrow />
           <p>Tooltip on bottom</p>
         </TooltipContent>
       </Tooltip>
