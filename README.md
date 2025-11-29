@@ -243,7 +243,7 @@ import {
 
 ### Icon
 
-The design system includes a flexible Icon wrapper component and sample SVG icons:
+The design system includes **Lucide React** icons built-in with 25+ commonly used icons:
 
 ```jsx
 import {
@@ -253,67 +253,63 @@ import {
   AlertIcon,
   InfoIcon,
   HeartIcon,
-  SettingsIcon
+  SettingsIcon,
+  StarIcon,
+  SearchIcon,
+  MenuIcon,
+  // ... and more
 } from '@jacopocontin/design-system';
 
-// Using wrapper with any icon
+// Using Icon wrapper with included icons
 <Icon size="md" variant="primary">
   <CheckIcon />
 </Icon>
 
-// Using sample icons directly
 <Icon size="lg" variant="success">
-  <CheckIcon />
+  <HeartIcon />
 </Icon>
 ```
 
-**Available Sizes:** `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+**Available Sizes:** `xs` (12px) | `sm` (16px) | `md` (20px) | `lg` (24px) | `xl` (32px) | `2xl` (40px)
+
 **Available Variants:** `default` | `primary` | `secondary` | `muted` | `error` | `success` | `warning`
 
-**Included Sample Icons:**
+**Included Lucide Icons (25+):**
 - CheckIcon, CloseIcon, AlertIcon, InfoIcon, HeartIcon, SettingsIcon
+- StarIcon, SearchIcon, MenuIcon, HomeIcon, UserIcon, MailIcon
+- BellIcon, CalendarIcon, ClockIcon, DownloadIcon, UploadIcon
+- TrashIcon, EditIcon, PlusIcon, MinusIcon
+- ChevronDownIcon, ChevronUpIcon, ChevronLeftIcon, ChevronRightIcon
 
-**Using Your Own Icons:**
+**Using Any Lucide Icon:**
 
-The Icon component works with any icon library. Popular choices:
+The design system includes lucide-react as a dependency. Use any icon from the [Lucide library](https://lucide.dev/icons/):
 
-**Lucide React** (Recommended)
-```bash
-npm install lucide-react
-```
 ```jsx
 import { Icon } from '@jacopocontin/design-system';
-import { Star, Heart, Settings } from 'lucide-react';
+import { Sparkles, Zap, Coffee } from 'lucide-react';
 
 <Icon size="md" variant="primary">
-  <Star />
+  <Sparkles />
+</Icon>
+
+<Icon size="lg" variant="warning">
+  <Zap />
 </Icon>
 ```
 
-**Heroicons**
-```bash
-npm install @heroicons/react
-```
+**Using Other Icon Libraries:**
+
+The Icon component also works with other libraries:
+
 ```jsx
-import { Icon } from '@jacopocontin/design-system';
+// Heroicons
 import { StarIcon } from '@heroicons/react/24/outline';
+<Icon size="lg"><StarIcon /></Icon>
 
-<Icon size="lg">
-  <StarIcon />
-</Icon>
-```
-
-**React Icons**
-```bash
-npm install react-icons
-```
-```jsx
-import { Icon } from '@jacopocontin/design-system';
+// React Icons
 import { FaStar } from 'react-icons/fa';
-
-<Icon size="md" variant="warning">
-  <FaStar />
-</Icon>
+<Icon size="md"><FaStar /></Icon>
 ```
 
 ## 🎨 Design Tokens

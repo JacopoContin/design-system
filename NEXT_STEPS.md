@@ -22,14 +22,14 @@ Replace these values in `/package.json`:
 ```json
 {
   "name": "@yourorg/radix-design-system",  // Change to @your-npm-username/your-package-name
-  "author": "Your Name <your.email@example.com>",  // Your actual name and email
+  "author": "Jacopo Contin <jacopocontin1986@gmail.com>",  // Your actual name and email
   "repository": {
-    "url": "https://github.com/yourorg/radix-design-system"  // Your GitHub repo URL
+    "url": "https://github.com/JacopoContin/design-system"  // Your GitHub repo URL
   },
   "bugs": {
     "url": "https://github.com/yourorg/radix-design-system/issues"  // Your issues URL
   },
-  "homepage": "https://yourorg.github.io/radix-design-system"  // Your Storybook URL (after deployment)
+  "homepage": "https://design-system-ecru.vercel.app/"  // Your Storybook URL (after deployment)
 }
 ```
 
