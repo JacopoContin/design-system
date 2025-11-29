@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ThemeProvider } from '../src/contexts/ThemeContext';
+import { ThemeProvider, useTheme } from '../src/contexts/ThemeContext';
 import { themes } from '../src/themes';
 import '../src/index.css';
 
@@ -55,7 +55,7 @@ const preview = {
 
 // Component to update theme when toolbar changes
 function ThemeUpdater({ themeName }) {
-  const { setTheme } = require('../src/contexts/ThemeContext').useTheme();
+  const { setTheme } = useTheme();
 
   useEffect(() => {
     setTheme(themeName);
