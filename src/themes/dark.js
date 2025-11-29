@@ -15,56 +15,52 @@ import {
 export const darkTheme = {
   name: 'dark',
   colors: {
-    // Primary colors - slightly lighter for dark mode
+    // Base colors
+    background: '0 0% 4%',          // #0a0a0a
+    foreground: '0 0% 98%',         // #fafafa
+
+    // Card colors
+    card: '0 0% 9%',                // #171717
+    'card-foreground': '0 0% 98%',  // #fafafa
+
+    // Popover colors
+    popover: '0 0% 15%',            // #262626
+    'popover-foreground': '0 0% 98%', // #fafafa
+
+    // Primary colors
     primary: {
-      DEFAULT: '220 90% 60%',
-      foreground: '0 0% 100%',
-      light: '220 90% 75%',
-      dark: '220 90% 45%',
+      DEFAULT: '0 0% 90%',          // #e5e5e5
+      foreground: '0 0% 9%',        // #171717
     },
 
     // Secondary colors
     secondary: {
-      DEFAULT: '220 17% 20%',
-      foreground: '220 14% 85%',
-      light: '220 17% 25%',
-      dark: '220 17% 15%',
+      DEFAULT: '0 0% 15%',          // #262626
+      foreground: '0 0% 98%',       // #fafafa
     },
 
-    // Base colors - inverted
-    background: '222 47% 11%',
-    foreground: '220 14% 96%',
-
-    // Card colors
-    card: '222 47% 11%',
-    'card-foreground': '220 14% 96%',
-
-    // Popover colors
-    popover: '222 47% 11%',
-    'popover-foreground': '220 14% 96%',
-
-    // UI element colors
+    // Muted colors
     muted: {
-      DEFAULT: '220 17% 20%',
-      foreground: '220 9% 65%',
+      DEFAULT: '0 0% 15%',          // #262626
+      foreground: '0 0% 63%',       // #a1a1a1
     },
 
     // Accent colors
     accent: {
-      DEFAULT: '220 90% 60%',
-      foreground: '0 0% 100%',
+      DEFAULT: '0 0% 25%',          // #404040
+      foreground: '0 0% 98%',       // #fafafa
     },
 
     // Destructive colors
     destructive: {
-      DEFAULT: '0 84% 65%',
-      foreground: '0 0% 100%',
+      DEFAULT: '359 100% 69%',      // #ff6467
+      foreground: '0 0% 98%',       // #fafafa
     },
 
-    border: '220 17% 24%',
-    input: '220 17% 24%',
-    ring: '220 90% 60%',
-    'muted-foreground': '220 9% 65%',
+    border: '0 0% 16%',             // #282828
+    input: '0 0% 20%',              // #343434
+    ring: '0 0% 45%',               // #737373
+    'muted-foreground': '0 0% 63%', // #a1a1a1
 
     // Semantic colors - adjusted for dark mode
     success: {
@@ -80,10 +76,10 @@ export const darkTheme = {
       dark: '38 92% 40%',
     },
     error: {
-      DEFAULT: '0 84% 65%',
-      foreground: '0 0% 100%',
-      light: '0 84% 80%',
-      dark: '0 84% 50%',
+      DEFAULT: '359 100% 69%',      // #ff6467 (same as destructive)
+      foreground: '0 0% 98%',
+      light: '359 100% 80%',
+      dark: '359 100% 50%',
     },
     info: {
       DEFAULT: '199 89% 53%',
@@ -103,9 +99,29 @@ export const darkTheme = {
   },
 
   borders: {
-    borderRadius,
+    borderRadius: {
+      none: '0px',
+      sm: 'calc(0.625rem - 4px)',   // --radius-sm: calc(var(--radius) - 4px)
+      md: 'calc(0.625rem - 2px)',   // --radius-md: calc(var(--radius) - 2px)
+      lg: '0.625rem',               // --radius-lg: var(--radius) = 0.625rem (10px)
+      xl: 'calc(0.625rem + 4px)',   // --radius-xl: calc(var(--radius) + 4px)
+      '2xl': '1rem',
+      '3xl': '1.5rem',
+      full: '9999px',
+    },
     borderWidth,
   },
 
-  shadows,
+  shadows: {
+    none: 'none',
+    '2xs': '0 1px 3px 0px hsl(0 0% 0% / 0.05)',
+    xs: '0 1px 3px 0px hsl(0 0% 0% / 0.05)',
+    sm: '0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10)',
+    DEFAULT: '0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 1px 2px -1px hsl(0 0% 0% / 0.10)',
+    md: '0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 2px 4px -1px hsl(0 0% 0% / 0.10)',
+    lg: '0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 4px 6px -1px hsl(0 0% 0% / 0.10)',
+    xl: '0 1px 3px 0px hsl(0 0% 0% / 0.10), 0 8px 10px -1px hsl(0 0% 0% / 0.10)',
+    '2xl': '0 1px 3px 0px hsl(0 0% 0% / 0.25)',
+    inner: 'inset 0 2px 4px rgba(0, 0, 0, 0.05)',
+  },
 };
