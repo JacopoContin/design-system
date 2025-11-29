@@ -1,6 +1,6 @@
 {
   "name": "@jacopocontin/design-system",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A themeable React component library built on Radix UI primitives with Tailwind CSS",
   "type": "module",
   "main": "./dist/index.cjs",
