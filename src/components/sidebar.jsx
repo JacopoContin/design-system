@@ -3,8 +3,8 @@ import { Slot } from "@radix-ui/react-slot"
 import { cva } from "class-variance-authority";
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/utils/index"
-import { Button } from "@/components/Button"
-import { Input } from "@/components/Input"
+import { Button } from "@/components/button"
+import { Input } from "@/components/input"
 import { Separator } from "@/components/separator"
 import {
   Sheet,

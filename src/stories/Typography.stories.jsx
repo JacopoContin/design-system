@@ -1,5 +1,5 @@
-import { Heading, Text, Label, Code } from '../components/Typography';
-import { Input } from '../components/Input';
+import { Heading, Text, Label, Code } from '../components/typography';
+import { Input } from '../components/input';
 
 export default {
   title: 'Components/Typography',

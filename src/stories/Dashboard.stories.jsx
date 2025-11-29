@@ -1,13 +1,13 @@
 import React from 'react';
-import { Button } from '../components/Button';
-import { Input } from '../components/Input';
+import { Button } from '../components/button';
+import { Input } from '../components/input';
 import {
   Select,
   SelectTrigger,
   SelectValue,
   SelectContent,
   SelectItem
-} from '../components/Select';
+} from '../components/select';
 import {
   Dialog,
   DialogTrigger,
@@ -17,8 +17,8 @@ import {
   DialogDescription,
   DialogFooter,
   DialogClose,
-} from '../components/Dialog';
-import { Switch } from '../components/Switch';
+} from '../components/dialog';
+import { Switch } from '../components/switch';
 import {
   CheckIcon,
   SettingsIcon,

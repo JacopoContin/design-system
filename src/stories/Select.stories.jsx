@@ -7,7 +7,7 @@ import {
   SelectGroup,
   SelectLabel,
   SelectSeparator,
-} from '../components/Select';
+} from '../components/select';
 
 export default {
   title: 'Components/Select',

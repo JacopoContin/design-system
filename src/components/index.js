@@ -3,8 +3,8 @@
  * All styled components built on Radix UI primitives
  */
 
-export { Button } from './Button';
-export { Input } from './Input';
+export { Button } from './button';
+export { Input } from './input';
 
 export {
   Dialog,
@@ -17,7 +17,7 @@ export {
   DialogFooter,
   DialogTitle,
   DialogDescription,
-} from './Dialog';
+} from './dialog';
 
 export {
   Select,
@@ -30,16 +30,16 @@ export {
   SelectSeparator,
   SelectScrollUpButton,
   SelectScrollDownButton,
-} from './Select';
+} from './select';
 
-export { Switch } from './Switch';
+export { Switch } from './switch';
 
 export {
   TooltipProvider,
   Tooltip,
   TooltipTrigger,
   TooltipContent,
-} from './Tooltip';
+} from './tooltip';
 
 export {
   Card,
@@ -48,14 +48,14 @@ export {
   CardDescription,
   CardContent,
   CardFooter,
-} from './Card';
+} from './card';
 
 export {
   Heading,
   Text,
   Label,
   Code,
-} from './Typography';
+} from './typography';
 
 export {
   Icon,
@@ -65,4 +65,4 @@ export {
   InfoIcon,
   HeartIcon,
   SettingsIcon,
-} from './Icon';
+} from './icon';

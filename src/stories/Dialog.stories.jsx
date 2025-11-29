@@ -1,4 +1,4 @@
-import { Button } from '../components/Button';
+import { Button } from '../components/button';
 import {
   Dialog,
   DialogTrigger,
@@ -8,7 +8,7 @@ import {
   DialogTitle,
   DialogDescription,
   DialogClose,
-} from '../components/Dialog';
+} from '../components/dialog';
 
 export default {
   title: 'Components/Dialog',

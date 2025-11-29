@@ -6,8 +6,8 @@ import {
   InfoIcon,
   HeartIcon,
   SettingsIcon,
-} from '../components/Icon';
-import { Button } from '../components/Button';
+} from '../components/icon';
+import { Button } from '../components/button';
 
 export default {
   title: 'Components/Icon',

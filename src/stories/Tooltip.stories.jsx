@@ -1,11 +1,11 @@
-import { Button } from '../components/Button';
+import { Button } from '../components/button';
 import {
   TooltipProvider,
   Tooltip,
   TooltipTrigger,
   TooltipContent,
   TooltipArrow,
-} from '../components/Tooltip';
+} from '../components/tooltip';
 
 export default {
   title: 'Components/Tooltip',

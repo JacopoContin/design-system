@@ -5,8 +5,8 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from '../components/Card';
-import { Button } from '../components/Button';
+} from '../components/card';
+import { Button } from '../components/button';
 
 export default {
   title: 'Components/Card',
