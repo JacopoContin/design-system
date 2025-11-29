@@ -82,15 +82,15 @@ export const DashboardExample = () => {
           <div className="flex items-center gap-8">
             <h1 className="text-xl font-bold">Design System Dashboard</h1>
             <nav className="hidden gap-6 md:flex">
-              <a href="#" className="text-foreground hover:text-primary text-sm font-medium transition-colors">
+              <button className="text-foreground hover:text-primary text-sm font-medium transition-colors">
                 Overview
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors">
+              </button>
+              <button className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors">
                 Analytics
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors">
+              </button>
+              <button className="text-muted-foreground hover:text-foreground text-sm font-medium transition-colors">
                 Reports
-              </a>
+              </button>
             </nav>
           </div>
 
