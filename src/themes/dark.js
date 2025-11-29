@@ -35,15 +35,36 @@ export const darkTheme = {
     background: '222 47% 11%',
     foreground: '220 14% 96%',
 
+    // Card colors
+    card: '222 47% 11%',
+    'card-foreground': '220 14% 96%',
+
+    // Popover colors
+    popover: '222 47% 11%',
+    'popover-foreground': '220 14% 96%',
+
     // UI element colors
     muted: {
       DEFAULT: '220 17% 20%',
       foreground: '220 9% 65%',
     },
 
+    // Accent colors
+    accent: {
+      DEFAULT: '220 90% 60%',
+      foreground: '0 0% 100%',
+    },
+
+    // Destructive colors
+    destructive: {
+      DEFAULT: '0 84% 65%',
+      foreground: '0 0% 100%',
+    },
+
     border: '220 17% 24%',
     input: '220 17% 24%',
     ring: '220 90% 60%',
+    'muted-foreground': '220 9% 65%',
 
     // Semantic colors - adjusted for dark mode
     success: {

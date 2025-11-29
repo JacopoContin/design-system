@@ -36,15 +36,36 @@ export const defaultTheme = {
     background: colors.background,
     foreground: colors.foreground,
 
+    // Card colors
+    card: colors.background,
+    'card-foreground': colors.foreground,
+
+    // Popover colors
+    popover: colors.background,
+    'popover-foreground': colors.foreground,
+
     // UI element colors
     muted: {
       DEFAULT: colors.muted.DEFAULT,
       foreground: colors.muted.foreground,
     },
 
+    // Accent colors
+    accent: {
+      DEFAULT: colors.primary.DEFAULT,
+      foreground: colors.primary.foreground,
+    },
+
+    // Destructive colors
+    destructive: {
+      DEFAULT: colors.error.DEFAULT,
+      foreground: colors.error.foreground,
+    },
+
     border: colors.border,
     input: colors.input,
     ring: colors.ring,
+    'muted-foreground': colors.muted.foreground,
 
     // Semantic colors
     success: {

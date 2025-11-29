@@ -18,17 +18,45 @@ export default {
         },
         background: 'hsl(var(--color-background))',
         foreground: 'hsl(var(--color-foreground))',
+        card: {
+          DEFAULT: 'hsl(var(--color-card))',
+          foreground: 'hsl(var(--color-card-foreground))',
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--color-popover))',
+          foreground: 'hsl(var(--color-popover-foreground))',
+        },
         muted: {
           DEFAULT: 'hsl(var(--color-muted))',
           foreground: 'hsl(var(--color-muted-foreground))',
         },
+        accent: {
+          DEFAULT: 'hsl(var(--color-accent))',
+          foreground: 'hsl(var(--color-accent-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--color-destructive))',
+          foreground: 'hsl(var(--color-destructive-foreground))',
+        },
         border: 'hsl(var(--color-border))',
         input: 'hsl(var(--color-input))',
         ring: 'hsl(var(--color-ring))',
-        success: 'hsl(var(--color-success))',
-        warning: 'hsl(var(--color-warning))',
-        error: 'hsl(var(--color-error))',
-        info: 'hsl(var(--color-info))',
+        success: {
+          DEFAULT: 'hsl(var(--color-success))',
+          foreground: 'hsl(var(--color-success-foreground))',
+        },
+        warning: {
+          DEFAULT: 'hsl(var(--color-warning))',
+          foreground: 'hsl(var(--color-warning-foreground))',
+        },
+        error: {
+          DEFAULT: 'hsl(var(--color-error))',
+          foreground: 'hsl(var(--color-error-foreground))',
+        },
+        info: {
+          DEFAULT: 'hsl(var(--color-info))',
+          foreground: 'hsl(var(--color-info-foreground))',
+        },
       },
       spacing: {
         xs: 'var(--spacing-xs)',
@@ -43,17 +71,27 @@ export default {
         mono: 'var(--font-mono)',
       },
       borderRadius: {
+        none: '0px',
         sm: 'var(--radius-sm)',
+        DEFAULT: 'var(--radius-md)', // Maps to rounded-md
         md: 'var(--radius-md)',
         lg: 'var(--radius-lg)',
         xl: 'var(--radius-xl)',
         '2xl': 'var(--radius-2xl)',
+        '3xl': 'var(--radius-2xl)',
+        full: '9999px',
       },
       boxShadow: {
+        none: 'none',
+        '2xs': 'var(--shadow-2xs)',
+        xs: 'var(--shadow-xs)',
         sm: 'var(--shadow-sm)',
+        DEFAULT: 'var(--shadow)',
         md: 'var(--shadow-md)',
         lg: 'var(--shadow-lg)',
         xl: 'var(--shadow-xl)',
+        '2xl': 'var(--shadow-2xl)',
+        inner: 'var(--shadow-inner)',
       },
     },
   },
