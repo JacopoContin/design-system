@@ -7,7 +7,7 @@ A production-ready, themeable React component library built on **Radix UI** prim
 
 ## ✨ Features
 
-- 🎨 **Multiple Themes** - Default (light), Dark, and Ocean (branded) themes with hot-swappable support
+- 🎨 **Multiple Themes** - Default (light), Dark, Luminist, and Brutalist themes with hot-swappable support
 - ♿ **Accessibility First** - Built on Radix UI for WAI-ARIA compliance and keyboard navigation
 - 🎯 **Design Tokens** - Centralized color, spacing, typography, borders, and shadows
 - 🔧 **Composable** - Radix Slot pattern for flexible component composition
@@ -64,7 +64,7 @@ function App() {
 Available themes:
 - `default` - Clean light theme
 - `dark` - Dark mode theme
-- `ocean` - Branded teal/ocean theme
+- `luminist` - Atmospheric theme inspired by luminism art movement with soft golden light
 - `brutalist` - Brutalist retro theme with burnt orange and bold typography
 
 ### Switching Themes Dynamically
@@ -79,7 +79,7 @@ function ThemeSwitcher() {
     <select value={theme} onChange={(e) => setTheme(e.target.value)}>
       <option value="default">Light</option>
       <option value="dark">Dark</option>
-      <option value="ocean">Ocean</option>
+      <option value="luminist">Luminist</option>
       <option value="brutalist">Brutalist</option>
     </select>
   );
@@ -376,7 +376,8 @@ function ThemeSwitcher() {
     <div>
       <button onClick={() => setTheme('default')}>☀️ Light</button>
       <button onClick={() => setTheme('dark')}>🌙 Dark</button>
-      <button onClick={() => setTheme('ocean')}>🌊 Ocean</button>
+      <button onClick={() => setTheme('luminist')}>✨ Luminist</button>
+      <button onClick={() => setTheme('brutalist')}>🔲 Brutalist</button>
     </div>
   );
 }
@@ -394,7 +395,7 @@ function App() {
 **Available Themes:**
 - `default` - Clean light theme
 - `dark` - Dark mode theme
-- `ocean` - Branded teal/ocean theme
+- `luminist` - Atmospheric theme inspired by luminism art movement with soft golden light
 - `brutalist` - Brutalist retro theme with burnt orange and bold typography
 
 **Preview themes:** Visit the [Storybook](https://design-system-ecru.vercel.app/) and use the theme switcher in the toolbar!

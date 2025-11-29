@@ -41,7 +41,7 @@ export {
 
 // Theme system
 export { ThemeProvider, useTheme } from './contexts';
-export { defaultTheme, darkTheme, oceanTheme, themes } from './themes';
+export { defaultTheme, darkTheme, luministTheme, brutalistTheme, themes } from './themes';
 
 // Design tokens
 export {

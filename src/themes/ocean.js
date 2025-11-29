@@ -10,66 +10,85 @@ import {
 } from '../tokens';
 
 /**
- * Ocean branded theme
- * A blue/teal themed variant for branded client projects
+ * Luminist Theme
+ * Inspired by luminism art movement: light, clarity, atmospheric effects
+ * Features: soft gradations, ethereal glow, subtle shadows, radiant whites
  */
 export const oceanTheme = {
-  name: 'ocean',
+  name: 'luminist',
   colors: {
-    // Primary colors - Ocean blue/teal
+    // Primary - Soft golden light (sunrise/sunset glow)
     primary: {
-      DEFAULT: '192 76% 46%',      // Teal
-      foreground: '0 0% 100%',
-      light: '192 76% 61%',
-      dark: '192 76% 31%',
+      DEFAULT: '43 74% 66%',      // Soft golden yellow
+      foreground: '40 20% 20%',    // Warm dark text
     },
 
-    // Secondary colors - Deep blue
+    // Secondary - Atmospheric blue-gray
     secondary: {
-      DEFAULT: '210 60% 96%',
-      foreground: '210 60% 20%',
-      light: '210 60% 98%',
-      dark: '210 60% 90%',
+      DEFAULT: '210 17% 82%',      // Soft blue-gray (atmospheric haze)
+      foreground: '210 15% 25%',
     },
 
-    // Base colors
-    background: '0 0% 100%',
-    foreground: '210 24% 16%',
+    // Base - Radiant whites and soft grays
+    background: '40 40% 99%',      // Warm white (sunlit)
+    foreground: '30 8% 20%',       // Soft charcoal (not pure black)
 
-    // UI element colors
+    // Card - Slightly elevated, glowing white
+    card: '40 50% 98%',
+    'card-foreground': '30 8% 20%',
+
+    // Popover
+    popover: '40 50% 98%',
+    'popover-foreground': '30 8% 20%',
+
+    // Muted - Atmospheric grays
     muted: {
-      DEFAULT: '210 40% 96%',
-      foreground: '210 10% 45%',
+      DEFAULT: '40 20% 94%',       // Soft warm gray
+      foreground: '30 6% 45%',     // Medium gray
     },
 
-    border: '210 30% 91%',
-    input: '210 30% 91%',
-    ring: '192 76% 46%',
+    // Accent - Luminous sky blue
+    accent: {
+      DEFAULT: '200 60% 75%',      // Ethereal sky blue
+      foreground: '200 40% 25%',
+    },
 
-    // Semantic colors - Ocean palette
+    // Borders - Barely visible, atmospheric
+    border: '40 15% 88%',          // Very soft, warm border
+    input: '40 15% 88%',
+    ring: '43 74% 66%',            // Golden glow for focus
+
+    // Muted foreground
+    'muted-foreground': '30 6% 50%',
+
+    // Destructive - Soft sunset red
+    destructive: {
+      DEFAULT: '3 65% 65%',        // Soft coral red
+      foreground: '0 0% 100%',
+    },
+
+    // Success - Luminous sage green
     success: {
-      DEFAULT: '152 69% 38%',      // Sea green
-      foreground: '0 0% 100%',
-      light: '152 69% 53%',
-      dark: '152 69% 23%',
+      DEFAULT: '145 40% 60%',      // Soft sage green
+      foreground: '145 30% 20%',
     },
+
+    // Warning - Warm amber glow
     warning: {
-      DEFAULT: '35 91% 56%',       // Coral
-      foreground: '0 0% 100%',
-      light: '35 91% 71%',
-      dark: '35 91% 41%',
+      DEFAULT: '38 85% 65%',       // Warm amber
+      foreground: '38 40% 20%',
     },
+
+    // Error - Same as destructive
     error: {
-      DEFAULT: '351 83% 55%',      // Coral red
+      DEFAULT: '3 65% 65%',
       foreground: '0 0% 100%',
-      light: '351 83% 70%',
-      dark: '351 83% 40%',
     },
+
+    // Info - Atmospheric blue
     info: {
-      DEFAULT: '203 87% 51%',      // Ocean blue
-      foreground: '0 0% 100%',
-      light: '203 87% 66%',
-      dark: '203 87% 36%',
+      DEFAULT: '200 60% 70%',
+      foreground: '200 40% 20%',
     },
   },
 
@@ -78,14 +97,44 @@ export const oceanTheme = {
   typography: {
     fontFamily,
     fontSize,
-    fontWeight,
-    lineHeight,
+    fontWeight: {
+      ...fontWeight,
+      // Luminist prefers lighter weights for ethereal feel
+      normal: '300',
+      medium: '400',
+      semibold: '500',
+      bold: '600',
+    },
+    lineHeight: {
+      ...lineHeight,
+      // More breathing room for atmospheric feel
+      normal: '1.75',
+      relaxed: '1.85',
+    },
   },
 
   borders: {
-    borderRadius,
+    borderRadius: {
+      ...borderRadius,
+      // Soft, gentle curves
+      sm: '0.25rem',
+      md: '0.5rem',
+      lg: '0.75rem',
+      xl: '1rem',
+      '2xl': '1.5rem',
+    },
     borderWidth,
   },
 
-  shadows,
+  shadows: {
+    // Luminist shadows are soft, diffused, atmospheric
+    none: 'none',
+    sm: '0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02)',
+    md: '0 4px 6px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.02)',
+    lg: '0 10px 15px rgba(0, 0, 0, 0.04), 0 4px 6px rgba(0, 0, 0, 0.02)',
+    xl: '0 20px 25px rgba(0, 0, 0, 0.05), 0 10px 10px rgba(0, 0, 0, 0.02)',
+    '2xl': '0 25px 50px rgba(0, 0, 0, 0.06), 0 15px 15px rgba(0, 0, 0, 0.02)',
+    inner: 'inset 0 2px 4px rgba(0, 0, 0, 0.03)',
+    glow: '0 0 20px rgba(255, 248, 220, 0.5)', // Soft golden glow
+  },
 };
