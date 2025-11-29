@@ -241,6 +241,81 @@ import {
 </TooltipProvider>
 ```
 
+### Icon
+
+The design system includes a flexible Icon wrapper component and sample SVG icons:
+
+```jsx
+import {
+  Icon,
+  CheckIcon,
+  CloseIcon,
+  AlertIcon,
+  InfoIcon,
+  HeartIcon,
+  SettingsIcon
+} from '@jacopocontin/design-system';
+
+// Using wrapper with any icon
+<Icon size="md" variant="primary">
+  <CheckIcon />
+</Icon>
+
+// Using sample icons directly
+<Icon size="lg" variant="success">
+  <CheckIcon />
+</Icon>
+```
+
+**Available Sizes:** `xs` | `sm` | `md` | `lg` | `xl` | `2xl`
+**Available Variants:** `default` | `primary` | `secondary` | `muted` | `error` | `success` | `warning`
+
+**Included Sample Icons:**
+- CheckIcon, CloseIcon, AlertIcon, InfoIcon, HeartIcon, SettingsIcon
+
+**Using Your Own Icons:**
+
+The Icon component works with any icon library. Popular choices:
+
+**Lucide React** (Recommended)
+```bash
+npm install lucide-react
+```
+```jsx
+import { Icon } from '@jacopocontin/design-system';
+import { Star, Heart, Settings } from 'lucide-react';
+
+<Icon size="md" variant="primary">
+  <Star />
+</Icon>
+```
+
+**Heroicons**
+```bash
+npm install @heroicons/react
+```
+```jsx
+import { Icon } from '@jacopocontin/design-system';
+import { StarIcon } from '@heroicons/react/24/outline';
+
+<Icon size="lg">
+  <StarIcon />
+</Icon>
+```
+
+**React Icons**
+```bash
+npm install react-icons
+```
+```jsx
+import { Icon } from '@jacopocontin/design-system';
+import { FaStar } from 'react-icons/fa';
+
+<Icon size="md" variant="warning">
+  <FaStar />
+</Icon>
+```
+
 ## 🎨 Design Tokens
 
 Access design tokens directly for custom components:
@@ -255,6 +330,75 @@ const customStyles = {
   boxShadow: shadows.lg,
 };
 ```
+
+## 🎨 Tailwind CSS Integration
+
+This design system is **built with Tailwind CSS** and works seamlessly with or without Tailwind in your project.
+
+### Without Tailwind in Your App
+
+Just import the CSS file - all styles are included:
+
+```jsx
+import '@jacopocontin/design-system/styles.css';
+```
+
+The CSS bundle includes all Tailwind utilities used by components. No Tailwind setup required!
+
+### With Tailwind in Your App
+
+If your app also uses Tailwind, you can extend the design system's tokens:
+
+```js
+// tailwind.config.js
+module.exports = {
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './node_modules/@jacopocontin/design-system/**/*.{js,jsx}',
+  ],
+  theme: {
+    extend: {
+      // Your custom styles work alongside the design system
+    },
+  },
+};
+```
+
+### Theme Switching
+
+All themes use CSS variables, so switching themes is instant:
+
+```jsx
+import { ThemeProvider, useTheme, themes } from '@jacopocontin/design-system';
+
+function ThemeSwitcher() {
+  const { setTheme } = useTheme();
+
+  return (
+    <div>
+      <button onClick={() => setTheme('default')}>☀️ Light</button>
+      <button onClick={() => setTheme('dark')}>🌙 Dark</button>
+      <button onClick={() => setTheme('ocean')}>🌊 Ocean</button>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider themes={themes} defaultTheme="default">
+      <ThemeSwitcher />
+      {/* Your app */}
+    </ThemeProvider>
+  );
+}
+```
+
+**Available Themes:**
+- `default` - Clean light theme
+- `dark` - Dark mode theme
+- `ocean` - Branded teal/ocean theme
+
+**Preview themes:** Visit the [Storybook](https://design-system-ecru.vercel.app/) and use the theme switcher in the toolbar!
 
 ## ♿ Accessibility
 
@@ -287,7 +431,7 @@ npm run dev
 
 ## 📚 Documentation
 
-View the full interactive documentation at [your-storybook-url.com](https://your-storybook-url.com)
+View the full interactive documentation at [design-system-ecru.vercel.app](https://design-system-ecru.vercel.app/)
 
 ## 🧪 Tech Stack
 
