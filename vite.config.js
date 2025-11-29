@@ -1,13 +1,21 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
+import dts from 'vite-plugin-dts';
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   // Library build mode
   if (mode === 'lib') {
     return {
-      plugins: [react()],
+      plugins: [
+        react(),
+        dts({
+          insertTypesEntry: true,
+          include: ['src/**/*.{js,jsx}'],
+          outDir: 'dist',
+        }),
+      ],
       build: {
         lib: {
           entry: resolve(__dirname, 'src/index.js'),
@@ -33,10 +41,15 @@ export default defineConfig(({ mode }) => {
               'react-dom': 'ReactDOM',
               'react/jsx-runtime': 'jsxRuntime',
             },
+            assetFileNames: (assetInfo) => {
+              if (assetInfo.name?.endsWith('.css')) return 'style.css';
+              return assetInfo.name;
+            },
           },
         },
         sourcemap: true,
         emptyOutDir: true,
+        cssCodeSplit: false,
       },
     };
   }
