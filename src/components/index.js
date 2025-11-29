@@ -38,9 +38,7 @@ export {
   TooltipProvider,
   Tooltip,
   TooltipTrigger,
-  TooltipPortal,
   TooltipContent,
-  TooltipArrow,
 } from './Tooltip';
 
 export {

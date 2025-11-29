@@ -34,9 +34,7 @@ export {
   TooltipProvider,
   Tooltip,
   TooltipTrigger,
-  TooltipPortal,
   TooltipContent,
-  TooltipArrow,
 } from './components';
 
 // Theme system

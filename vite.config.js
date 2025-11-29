@@ -16,6 +16,11 @@ export default defineConfig(({ mode }) => {
           outDir: 'dist',
         }),
       ],
+      resolve: {
+        alias: {
+          '@': resolve(__dirname, './src'),
+        },
+      },
       build: {
         lib: {
           entry: resolve(__dirname, 'src/index.js'),
@@ -29,11 +34,12 @@ export default defineConfig(({ mode }) => {
             'react',
             'react-dom',
             'react/jsx-runtime',
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-select',
-            '@radix-ui/react-slot',
-            '@radix-ui/react-switch',
-            '@radix-ui/react-tooltip',
+            'lucide-react',
+            'recharts',
+            'sonner',
+            'vaul',
+            'class-variance-authority',
+            /^@radix-ui\/.*/,
           ],
           output: {
             globals: {
@@ -57,5 +63,10 @@ export default defineConfig(({ mode }) => {
   // Default dev mode
   return {
     plugins: [react()],
+    resolve: {
+      alias: {
+        '@': resolve(__dirname, './src'),
+      },
+    },
   };
 });
