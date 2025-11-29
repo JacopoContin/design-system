@@ -86,4 +86,5 @@ export {
   Edit as EditIcon,
   Plus as PlusIcon,
   Minus as MinusIcon,
+  TrendingUp as TrendingUpIcon,
 } from 'lucide-react';
