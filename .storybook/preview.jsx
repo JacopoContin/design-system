@@ -30,6 +30,7 @@ const preview = {
           { value: 'default', title: 'Default (Light)', icon: 'sun' },
           { value: 'dark', title: 'Dark', icon: 'moon' },
           { value: 'ocean', title: 'Ocean (Branded)', icon: 'paintbrush' },
+          { value: 'brutalist', title: 'Brutalist Retro', icon: 'box' },
         ],
         dynamicTitle: true,
       },

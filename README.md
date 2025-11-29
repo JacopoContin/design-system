@@ -65,6 +65,7 @@ Available themes:
 - `default` - Clean light theme
 - `dark` - Dark mode theme
 - `ocean` - Branded teal/ocean theme
+- `brutalist` - Brutalist retro theme with burnt orange and bold typography
 
 ### Switching Themes Dynamically
 
@@ -79,6 +80,7 @@ function ThemeSwitcher() {
       <option value="default">Light</option>
       <option value="dark">Dark</option>
       <option value="ocean">Ocean</option>
+      <option value="brutalist">Brutalist</option>
     </select>
   );
 }
@@ -393,6 +395,7 @@ function App() {
 - `default` - Clean light theme
 - `dark` - Dark mode theme
 - `ocean` - Branded teal/ocean theme
+- `brutalist` - Brutalist retro theme with burnt orange and bold typography
 
 **Preview themes:** Visit the [Storybook](https://design-system-ecru.vercel.app/) and use the theme switcher in the toolbar!
 
