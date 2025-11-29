@@ -1,140 +1,134 @@
-import { colors as baseColors } from '../tokens/colors';
 import { spacing } from '../tokens/spacing';
-import { fontFamily, fontSize, fontWeight, lineHeight } from '../tokens/typography';
-import { borderRadius, borderWidth } from '../tokens/borders';
-import { shadows } from '../tokens/shadows';
+import { fontSize, lineHeight } from '../tokens/typography';
 
 /**
- * Brutalist Retro Theme
- * Inspired by brutalist web design with 70s/80s color palette
- * Features: bold typography, high contrast, geometric shapes, burnt orange accent
+ * Brutalist Theme
+ * High-contrast design with vibrant colors, sharp edges, and bold shadows
+ * Based on modern brutalist design principles
  */
 export const brutalistTheme = {
   name: 'brutalist',
   colors: {
     // Base colors - pure black and white for maximum contrast
-    background: '0 0% 100%', // Pure white
-    foreground: '0 0% 0%', // Pure black
+    background: '0 0% 100%', // oklch(1.0000 0 0)
+    foreground: '0 0% 0%', // oklch(0 0 0)
 
     // Card backgrounds
-    card: '0 0% 100%',
-    'card-foreground': '0 0% 0%',
+    card: '0 0% 100%', // oklch(1.0000 0 0)
+    'card-foreground': '0 0% 0%', // oklch(0 0 0)
 
     // Popovers
-    popover: '0 0% 100%',
-    'popover-foreground': '0 0% 0%',
+    popover: '0 0% 100%', // oklch(1.0000 0 0)
+    'popover-foreground': '0 0% 0%', // oklch(0 0 0)
 
-    // Primary - Burnt Orange/Coral (signature brutalist retro color)
+    // Primary - Vibrant orange
     primary: {
-      DEFAULT: '12 82% 60%', // Burnt orange #E56B51
-      foreground: '0 0% 100%', // White text on orange
+      DEFAULT: '27 100% 65%', // oklch(0.6489 0.2370 26.9728)
+      foreground: '0 0% 100%',
     },
 
-    // Secondary - Charcoal gray for subtle elements
+    // Secondary - Bright lime green
     secondary: {
-      DEFAULT: '0 0% 20%', // Dark charcoal
-      foreground: '0 0% 100%',
-    },
-
-    // Muted - Light gray backgrounds
-    muted: {
-      DEFAULT: '0 0% 96%', // Very light gray
-      foreground: '0 0% 15%',
-    },
-
-    // Accent - Darker orange for hover states
-    accent: {
-      DEFAULT: '12 75% 50%', // Darker burnt orange
-      foreground: '0 0% 100%',
-    },
-
-    // Destructive - Pure red for errors
-    destructive: {
-      DEFAULT: '0 84% 50%', // Pure red
-      foreground: '0 0% 100%',
-    },
-
-    // Success - No subtle greens, use pure green
-    success: {
-      DEFAULT: '120 100% 35%', // Pure green
-      foreground: '0 0% 100%',
-    },
-
-    // Warning - Bold yellow
-    warning: {
-      DEFAULT: '45 100% 50%', // Bold yellow
+      DEFAULT: '110 100% 69%', // oklch(0.9680 0.2110 109.7692)
       foreground: '0 0% 0%',
+    },
+
+    // Muted - Very light gray
+    muted: {
+      DEFAULT: '0 0% 96%', // oklch(0.9551 0 0)
+      foreground: '0 0% 32%', // oklch(0.3211 0 0)
+    },
+
+    // Accent - Vibrant purple
+    accent: {
+      DEFAULT: '261 100% 56%', // oklch(0.5635 0.2408 260.8178)
+      foreground: '0 0% 100%',
+    },
+
+    // Destructive - Pure black
+    destructive: {
+      DEFAULT: '0 0% 0%', // oklch(0 0 0)
+      foreground: '0 0% 100%',
+    },
+
+    // Success - Bright green
+    success: {
+      DEFAULT: '142 100% 73%', // oklch(0.7323 0.2492 142.4953)
+      foreground: '0 0% 0%',
+    },
+
+    // Warning - Bright pink/magenta
+    warning: {
+      DEFAULT: '328 100% 59%', // oklch(0.5931 0.2726 328.3634)
+      foreground: '0 0% 100%',
     },
 
     // Error - Same as destructive
     error: {
-      DEFAULT: '0 84% 50%',
+      DEFAULT: '0 0% 0%',
       foreground: '0 0% 100%',
     },
 
-    // Borders - Pure black, thick and bold
-    border: '0 0% 0%',
-    input: '0 0% 0%',
-    ring: '12 82% 60%', // Orange focus ring
+    // Info - Same as accent
+    info: {
+      DEFAULT: '261 100% 56%',
+      foreground: '0 0% 100%',
+    },
 
-    // Muted foreground - medium gray for less important text
-    'muted-foreground': '0 0% 40%',
+    // Borders - Pure black
+    border: '0 0% 0%', // oklch(0 0 0)
+    input: '0 0% 0%', // oklch(0 0 0)
+    ring: '27 100% 65%', // oklch(0.6489 0.2370 26.9728)
+
+    // Muted foreground
+    'muted-foreground': '0 0% 32%', // oklch(0.3211 0 0)
   },
 
   spacing,
 
   typography: {
     fontFamily: {
-      ...fontFamily,
-      // Override with more brutalist fonts if needed
-      sans: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Helvetica Neue"',
-        'Arial',
-        'sans-serif',
-      ].join(', '),
+      sans: 'DM Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      serif: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+      mono: 'Space Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
     },
-    fontSize: {
-      ...fontSize,
-      // Brutalist loves HUGE text
-      '3xl': '2rem',
-      '4xl': '2.5rem',
-      '5xl': '3rem',
-    },
+    fontSize,
     fontWeight: {
-      ...fontWeight,
-      // Prefer bold weights
-      normal: '500',
+      thin: '100',
+      extralight: '200',
+      light: '300',
+      normal: '500', // Brutalist prefers heavier weights
       medium: '600',
       semibold: '700',
       bold: '900',
+      extrabold: '900',
+      black: '900',
     },
-    lineHeight: {
-      ...lineHeight,
-      // Tighter line-height for impact
-      tight: '1.1',
-      snug: '1.25',
+    lineHeight,
+    letterSpacing: {
+      tighter: '-0.05em',
+      tight: '-0.025em',
+      normal: '0em', // --tracking-normal from CSS
+      wide: '0.025em',
+      wider: '0.05em',
+      widest: '0.1em',
     },
   },
 
   borders: {
     borderRadius: {
-      ...borderRadius,
-      // Brutalism uses sharp corners, minimal rounding
-      none: '0',
-      sm: '0',
-      md: '2px', // Very minimal
-      lg: '4px',
-      xl: '6px',
-      '2xl': '8px',
+      none: '0px',
+      sm: '0px',
+      md: '0px',
+      lg: '0px',
+      xl: '0px',
+      '2xl': '0px',
+      '3xl': '0px',
       full: '9999px',
     },
     borderWidth: {
-      ...borderWidth,
-      // Thick, bold borders
       DEFAULT: '2px',
-      0: '0',
+      0: '0px',
       2: '2px',
       4: '4px',
       8: '8px',
@@ -142,14 +136,16 @@ export const brutalistTheme = {
   },
 
   shadows: {
-    ...shadows,
-    // Brutalism often avoids shadows, but when used they're harsh
-    sm: 'none',
-    md: '4px 4px 0px rgba(0, 0, 0, 1)', // Hard shadow
-    lg: '8px 8px 0px rgba(0, 0, 0, 1)',
-    xl: '12px 12px 0px rgba(0, 0, 0, 1)',
-    '2xl': '16px 16px 0px rgba(0, 0, 0, 1)',
-    inner: 'inset 2px 2px 4px rgba(0, 0, 0, 0.25)',
+    // Brutalist hard shadows with 4px offset
     none: 'none',
+    '2xs': '4px 4px 0px 0px hsl(0 0% 0% / 0.50)',
+    xs: '4px 4px 0px 0px hsl(0 0% 0% / 0.50)',
+    sm: '4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 1px 2px -1px hsl(0 0% 0% / 1.00)',
+    DEFAULT: '4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 1px 2px -1px hsl(0 0% 0% / 1.00)',
+    md: '4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 2px 4px -1px hsl(0 0% 0% / 1.00)',
+    lg: '4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 4px 6px -1px hsl(0 0% 0% / 1.00)',
+    xl: '4px 4px 0px 0px hsl(0 0% 0% / 1.00), 4px 8px 10px -1px hsl(0 0% 0% / 1.00)',
+    '2xl': '4px 4px 0px 0px hsl(0 0% 0% / 2.50)',
+    inner: 'inset 0 2px 4px rgba(0, 0, 0, 0.25)',
   },
 };
