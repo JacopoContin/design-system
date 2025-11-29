@@ -1,5 +1,5 @@
 {
-  "name": "@yourorg/radix-design-system",
+  "name": "@jacopocontin/design-system",
   "version": "1.0.0",
   "description": "A themeable React component library built on Radix UI primitives with Tailwind CSS",
   "type": "module",
@@ -29,16 +29,16 @@
     "theming",
     "ui-library"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "Jacopo Contin <jacopocontin1986@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourorg/radix-design-system"
+    "url": "https://github.com/JacopoContin/design-system"
   },
   "bugs": {
-    "url": "https://github.com/yourorg/radix-design-system/issues"
+    "url": "https://github.com/JacopoContin/design-system/issues"
   },
-  "homepage": "https://yourorg.github.io/radix-design-system",
+  "homepage": "https://design-system-ecru.vercel.app/?path=/docs/introduction--docs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

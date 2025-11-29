@@ -2,7 +2,7 @@
 
 A production-ready, themeable React component library built on **Radix UI** primitives with **Tailwind CSS**. Perfect for creating accessible, customizable user interfaces across multiple client projects.
 
-[![npm version](https://img.shields.io/npm/v/@yourorg/radix-design-system.svg)](https://www.npmjs.com/package/@yourorg/radix-design-system)
+[![npm version](https://img.shields.io/npm/v/@jacopocontin/design-system.svg)](https://www.npmjs.com/package/@jacopocontin/design-system)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## ✨ Features
@@ -18,7 +18,7 @@ A production-ready, themeable React component library built on **Radix UI** prim
 ## 📦 Installation
 
 ```bash
-npm install @yourorg/radix-design-system
+npm install @jacopocontin/design-system
 ```
 
 ### Peer Dependencies
@@ -30,8 +30,8 @@ npm install react react-dom
 ## 🚀 Quick Start
 
 ```jsx
-import { Button, ThemeProvider, themes } from '@yourorg/radix-design-system';
-import '@yourorg/radix-design-system/styles.css';
+import { Button, ThemeProvider, themes } from '@jacopocontin/design-system';
+import '@jacopocontin/design-system/styles.css';
 
 function App() {
   return (
@@ -50,7 +50,7 @@ function App() {
 ### Using Built-in Themes
 
 ```jsx
-import { ThemeProvider, themes } from '@yourorg/radix-design-system';
+import { ThemeProvider, themes } from '@jacopocontin/design-system';
 
 function App() {
   return (
@@ -69,7 +69,7 @@ Available themes:
 ### Switching Themes Dynamically
 
 ```jsx
-import { useTheme } from '@yourorg/radix-design-system';
+import { useTheme } from '@jacopocontin/design-system';
 
 function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
@@ -87,7 +87,7 @@ function ThemeSwitcher() {
 ### Creating Custom Themes
 
 ```jsx
-import { ThemeProvider } from '@yourorg/radix-design-system';
+import { ThemeProvider } from '@jacopocontin/design-system';
 
 const customTheme = {
   name: 'custom',
@@ -121,7 +121,7 @@ const allThemes = {
 ### Button
 
 ```jsx
-import { Button } from '@yourorg/radix-design-system';
+import { Button } from '@jacopocontin/design-system';
 
 <Button variant="primary" size="md">Primary Button</Button>
 <Button variant="secondary">Secondary</Button>
@@ -139,7 +139,7 @@ import { Button } from '@yourorg/radix-design-system';
 ### Input
 
 ```jsx
-import { Input } from '@yourorg/radix-design-system';
+import { Input } from '@jacopocontin/design-system';
 
 <Input placeholder="Enter text..." />
 <Input state="error" defaultValue="Invalid" />
@@ -164,7 +164,7 @@ import {
   DialogDescription,
   DialogFooter,
   DialogClose,
-} from '@yourorg/radix-design-system';
+} from '@jacopocontin/design-system';
 
 <Dialog>
   <DialogTrigger asChild>
@@ -195,7 +195,7 @@ import {
   SelectValue,
   SelectContent,
   SelectItem,
-} from '@yourorg/radix-design-system';
+} from '@jacopocontin/design-system';
 
 <Select>
   <SelectTrigger>
@@ -212,7 +212,7 @@ import {
 ### Switch (Toggle)
 
 ```jsx
-import { Switch } from '@yourorg/radix-design-system';
+import { Switch } from '@jacopocontin/design-system';
 
 const [enabled, setEnabled] = useState(false);
 
@@ -227,7 +227,7 @@ import {
   Tooltip,
   TooltipTrigger,
   TooltipContent,
-} from '@yourorg/radix-design-system';
+} from '@jacopocontin/design-system';
 
 <TooltipProvider>
   <Tooltip>
@@ -246,7 +246,7 @@ import {
 Access design tokens directly for custom components:
 
 ```jsx
-import { colors, spacing, shadows } from '@yourorg/radix-design-system';
+import { colors, spacing, shadows } from '@jacopocontin/design-system';
 
 // Use in your custom components
 const customStyles = {
