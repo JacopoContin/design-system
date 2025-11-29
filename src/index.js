@@ -3,6 +3,9 @@
  * Export all components, contexts, themes, and utilities
  */
 
+// Import styles
+import './index.css';
+
 // Components
 export {
   Button,
