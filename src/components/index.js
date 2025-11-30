@@ -50,10 +50,11 @@ export {
   CardFooter,
 } from './card';
 
+export { Label } from './label';
+
 export {
   Heading,
   Text,
-  Label,
   Code,
 } from './typography';
 

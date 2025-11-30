@@ -80,46 +80,6 @@ export const Text = React.forwardRef(({
 Text.displayName = 'Text';
 
 /**
- * Label component for form labels
- * Provides consistent label styling
- *
- * @param {Object} props
- * @param {'default' | 'error' | 'success'} props.state - Label state
- * @param {boolean} props.required - Show required indicator
- * @param {boolean} props.asChild - Render as child element using Radix Slot
- * @param {string} props.className - Additional CSS classes
- */
-export const Label = React.forwardRef(({
-  state = 'default',
-  required = false,
-  asChild = false,
-  className,
-  children,
-  ...props
-}, ref) => {
-  const Comp = asChild ? Slot : 'label';
-
-  const styles = cn(
-    'text-sm font-medium leading-none',
-    'peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
-    {
-      'text-foreground': state === 'default',
-      'text-error': state === 'error',
-      'text-success': state === 'success',
-    },
-    className
-  );
-
-  return (
-    <Comp ref={ref} className={styles} {...props}>
-      {children}
-      {required && <span className="ml-1 text-error">*</span>}
-    </Comp>
-  );
-});
-Label.displayName = 'Label';
-
-/**
  * Code component for inline code
  * Provides consistent monospace styling
  */
