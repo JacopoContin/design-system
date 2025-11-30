@@ -2,6 +2,12 @@
  * Theme presets for the design system
  */
 
+import { defaultTheme } from './default';
+import { darkTheme } from './dark';
+import { oceanTheme as luministTheme } from './ocean';
+import { brutalistTheme, brutalistDarkTheme } from './brutalist';
+
+// Re-export individual themes
 export { defaultTheme } from './default';
 export { darkTheme } from './dark';
 export { oceanTheme as luministTheme } from './ocean';
@@ -18,12 +24,9 @@ export const allThemes = {
   'brutalist-dark': null, // Will be lazy loaded
 };
 
-// Synchronous export for convenience
-import { defaultTheme } from './default';
-import { darkTheme } from './dark';
-import { oceanTheme as luministTheme } from './ocean';
-import { brutalistTheme, brutalistDarkTheme } from './brutalist';
-
+/**
+ * Synchronous themes object
+ */
 export const themes = {
   default: defaultTheme,
   dark: darkTheme,
